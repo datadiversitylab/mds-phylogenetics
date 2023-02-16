@@ -26,6 +26,5 @@ plot(fit_reg, main="MDS")
 
 ```{r}
 #performs inverse MDS
-#could not plot because of 21 dissimilarities 
 fit_in <- inverseMDS(fit_reg$conf)
 ```
