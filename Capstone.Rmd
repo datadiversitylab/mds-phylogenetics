@@ -1,0 +1,31 @@
+```{r}
+#import packages
+library(ape)
+library(phangorn)
+library(MASS)
+library(smacof)
+```
+
+```{r}
+#simulate data & create distant matrix
+set.seed(1)
+
+tree<- rtree(5)
+data <- simSeq(tree, l=10, type="DNA", bf=c(.1,.2,.3,.4), Q=1:6,ancestral=TRUE)
+dm <- dist.ml(data)
+dm[is.na(dm)] <- 0
+treeUPGMA <- upgma(dm)
+treeNJ <- NJ(dm)
+```
+
+```{r}
+#performs multidimensional scaling (MDS) & plot results 
+fit_reg <- mds(dm)
+plot(fit_reg, main="MDS")
+```
+
+```{r}
+#performs inverse MDS
+#could not plot because of 21 dissimilarities 
+fit_in <- inverseMDS(fit_reg$conf)
+```
