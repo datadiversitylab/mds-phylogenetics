@@ -22,6 +22,7 @@ treeNJ <- NJ(dm)
 #performs multidimensional scaling (MDS) & plot results 
 fit_reg <- mds(dm)
 plot(fit_reg, main="MDS")
+plot(hclust(dm))
 ```
 
 ```{r}
