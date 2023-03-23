@@ -22,6 +22,10 @@ data <- simSeq(tree, l = l, type = "DNA", bf = c(.1,.2,.3,.4), Q = 1:6, ancestra
 dm <- dist.ml(data)
 dm[is.na(dm)] <- 0
 
+dna <- apply(as.character(data), 1, function(x) paste0(x, collapse = ""))
+dna <- toupper(dna)
+ohe <- matrix(t(diag(4)[match(unlist(lapply(dna, utf8ToInt)), utf8ToInt("ACGT")), ]), nrow = length(dna), byrow = TRUE)
+
 #Based on the estimated distance matrix, we can infer a quick phylogeny
 treeUPGMA <- upgma(dm)
 treeNJ <- NJ(dm)
@@ -41,6 +45,10 @@ fit_reg <- mds(dm)
 plot(fit_reg, main = "MDS")
 mds_tree <- as.phylo(hclust(dm))
 plot(mds_tree)
+
+fullds <- cbind.data.frame(mds_vector = fit_reg$conf[,1], ohe[,1:5])
+
+summary(lm(mds_vector ~ ., fullds))
 ```
 
 Now, we can compare the MDS-based to the UPGMA and original trees
@@ -63,16 +71,9 @@ fit_in <- inverseMDS(fit_reg$conf)
 
 Build the corresponding tree from each of the new matrices generated using `inverseMDS`.
 
-```{r}
-fit_in_trees <- lapply(fit_in, function(x) as.phylo(hclust(x)))
-```
-
 Now, we need to compare the topology between the original tree and the newly generated ones.
 
-```{r}
-x=1
-comparePhylo(fit_in_trees[[x]], tree, plot = TRUE, force.rooted = FALSE, use.edge.length = TRUE)
-```
+
 
 
 
