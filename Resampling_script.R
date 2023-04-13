@@ -42,7 +42,7 @@ singleTreeSize <- function(size, replicates){
   return(dist)
 }
 res <- singleTreeSize(size = 7, replicates = 100)
-hist(res$FreqEquivalent, main = "Frequency of the i-MDS trees matching the true tree")
+hist(res$FreqEquivalent, main = "Frequency of the i-MDS \ntrees matching the true tree")
 
 
 
