@@ -1,0 +1,31 @@
+---
+title: "Meeting_April13"
+output: html_document
+date: "2023-04-13"
+---
+
+The question is: Are these two trees the same? In a single output (`TRUE/FALSE`) state whether the trees created below are the same.
+
+Task 1: These trees are not the same
+
+```{r}
+a <- read.tree(text = "(a,b,(c,d));")
+b <- read.tree(text = "(a,c,(b,d));")
+comparePhylo(a, b, plot = TRUE, force.rooted = TRUE)
+```
+
+Task 2: These trees are not the same
+
+```{r}
+#these trees are equivalent
+a <- read.tree(text = "(a,c,(b,d));")
+b <- read.tree(text = "(a,c,(b,d));")
+comparePhylo(a, b, plot = TRUE, force.rooted = TRUE)
+```
+
+Hint: equivalent trees have 100% of splits in common. You will need to know how many splits there are in each tree. And then, estimate the number of splits in common.
+
+
+
+
+
