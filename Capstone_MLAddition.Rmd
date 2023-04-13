@@ -1,0 +1,125 @@
+```{r}
+#import packages
+library(ape)
+library(phangorn)
+library(MASS)
+library(smacof)
+```
+
+```{r}
+#simulate data & create distant matrix
+set.seed(1)
+nsp <- 5
+l = 500
+
+#This is the true tree
+tree <- rtree(nsp)
+
+#Let's now simulate the sequence alignment
+data <- simSeq(tree, l = l, type = "DNA", bf = c(.1,.2,.3,.4), Q = 1:6, ancestral = FALSE)
+
+#We need to estimate the distance matrix for the estimated alignment
+dm <- dist.ml(data)
+dm[is.na(dm)] <- 0
+
+#Based on the estimated distance matrix, we can infer a quick phylogeny
+treeUPGMA <- upgma(dm)
+treeNJ <- NJ(dm)
+```
+
+Now, are the estimated and true trees similar? We'll use the UPGMA for this.
+
+```{r}
+comparePhylo(treeUPGMA, tree, plot = TRUE, force.rooted = FALSE)
+```
+
+Let's now perform MDS on the distance matrix
+
+```{r}
+#performs multidimensional scaling (MDS) & plot results 
+fit_reg <- mds(dm, ndim = 2)
+#plot(fit_reg, main = "MDS")
+mds_tree <- as.phylo(hclust(dm))
+plot(mds_tree)
+```
+
+Now, we can compare the MDS-based to the UPGMA and original trees
+
+```{r}
+treeUPGMA <- unroot(treeUPGMA)
+mds_tree <- unroot(mds_tree)
+tree <- unroot(tree)
+
+comparePhylo(treeUPGMA, mds_tree, plot = TRUE, force.rooted = FALSE, use.edge.length = TRUE)
+comparePhylo(tree, mds_tree, plot = TRUE, force.rooted = FALSE, use.edge.length = TRUE)
+```
+
+Let's now fit an inverse MDS for the MDS tree
+
+```{r}
+#performs inverse MDS
+fit_in <- inverseMDS(fit_reg$conf)
+```
+
+Build the corresponding tree from each of the new matrices generated using `inverseMDS`.
+
+```{r}
+fit_in_trees <- lapply(fit_in, function(x) as.phylo(hclust(x)))
+```
+
+Now, we need to compare the topology between the original tree and the newly generated ones.
+
+```{r}
+x=3
+comparePhylo(fit_in_trees[[x]], tree, plot = TRUE, force.rooted = FALSE, use.edge.length = TRUE)
+```
+
+
+Now, we are going to do a one-hot-encoding of the sequence alignment
+
+```{r}
+dna <- apply(as.character(data), 1, function(x) paste0(x, collapse = ""))
+dna <- toupper(dna)
+ohe <- matrix(t(diag(4)[match(unlist(lapply(dna, utf8ToInt)), utf8ToInt("ACGT")), ]), nrow = length(dna), byrow = TRUE)
+ohe <- data.frame(ohe)
+```
+
+We will drop columns that are rather constant
+```{r}
+cst <- sapply(ohe, function(x) length(which( x == 1))  )
+ohe2 <- ohe[,-which(cst <2)]
+```
+
+Now, we will predict the MDS-based vector from the one-hot encoded regression model. Let's do the train/test split first.
+
+```{r}
+library(caret)
+library(rsample)
+fullds <- cbind.data.frame(mds_vector = fit_reg$conf, ohe2)
+base_split <- initial_split(fullds, prop = .7)
+train <- training(base_split)
+test  <- testing(base_split)
+```
+
+We will now fit to RF models, each predicting a different dimension of the MDS.
+
+```{r}
+library(randomForest)
+set.seed(123)
+
+m1 <- randomForest(
+  formula = mds_vector.D1 ~ .,
+  data    = train
+)
+
+m2 <- randomForest(
+  formula = mds_vector.D2 ~ .,
+  data    = train
+)
+
+```
+
+
+
+
+
