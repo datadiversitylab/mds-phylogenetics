@@ -9,11 +9,12 @@ library(smacof)
 set.seed(1)
 
 #Function to create a number of random trees with size `size`. The same 
-#function fits an MDS and the inverse-MDS for each of the trees
+#function fits an MDS and the inverse-MDS for each of the trees. This function
+#also compares the frequency in which inverse-MDS trees match the true tree.
 
 singleTreeSize <- function(size, replicates){
   
-  dist <- lapply(1:replicates, function(y){
+  dist <- sapply(1:replicates, function(y){
     #This is the true tree
     tree <- rtree(size)
     
@@ -32,13 +33,16 @@ singleTreeSize <- function(size, replicates){
     fit_in <- inverseMDS(fit_reg$conf)
     fit_in_trees <- lapply(fit_in, function(x) as.phylo(hclust(x)))
     
-    list("True" = tree, "MDS_tree" = mds_tree, "i-MDS_tree" = fit_in_trees)
+    TopDistance <- sapply(fit_in_trees, function(x) dist.topo(unroot(tree), unroot(x)))
+    FreqSame <- length(which(TopDistance == 0))/length(TopDistance)
+    
+    list("FreqEquivalent" =  FreqSame)
   })
-  names(dist) <- paste0("Tree_", 1:replicates)
+  dist <- cbind.data.frame(Tree = paste0("Tree_", 1:replicates), "FreqEquivalent" = unlist(dist))
   return(dist)
 }
-singleTreeSize(size = 4, replicates = 2)
-
+res <- singleTreeSize(size = 7, replicates = 100)
+hist(res$FreqEquivalent, main = "Frequency of the i-MDS trees matching the true tree")
 
 
 
