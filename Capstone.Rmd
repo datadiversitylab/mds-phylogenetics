@@ -16,7 +16,10 @@ l = 500
 tree <- rtree(nsp)
 
 #Let's now simulate the sequence alignment
-data <- simSeq(tree, l = l, type = "DNA", bf = c(.1,.2,.3,.4), Q = 1:6, ancestral = FALSE)
+tree <- rtree(5)
+write.tree(tree, "tree0.nwk")
+system("iqtree2 --alisim alignment0 -m JC -t tree0.nwk -seed 123")
+data <- as.phyDat(read.dna("alignment0.phy"))
 
 #We need to estimate the distance matrix for the estimated alignment
 dm <- dist.ml(data)
@@ -95,6 +98,7 @@ Now, we will predict the MDS-based vector from the one-hot encoded regression mo
 ```{r}
 library(caret)
 library(rsample)
+library(ggplot2)
 fullds <- cbind.data.frame(mds_vector = fit_reg$conf, ohe2)
 base_split <- initial_split(fullds, prop = .7)
 train <- training(base_split)
@@ -119,7 +123,9 @@ m2 <- randomForest(
 
 ```
 
-
+```{r}
+iqtree2 --alisim dna -m JC -t tree.nwk -seed 123
+```
 
 
 
