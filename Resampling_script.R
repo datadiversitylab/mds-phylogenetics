@@ -12,14 +12,35 @@ set.seed(1)
 #function fits an MDS and the inverse-MDS for each of the trees. This function
 #also compares the frequency in which inverse-MDS trees match the true tree.
 
-singleTreeSize <- function(size, replicates){
+singleTreeSize <- function(size, 
+                           replicates, 
+                           aln_prefix = "alignment",
+                           aln_model = "JC", 
+                           aln_number = 2,
+                           aln_length =  1000,
+                           aln_gamma4C = NULL,
+                           aln_I = NULL,
+                           aln_indel = NULL #"0.03,0.1"
+){
   
-  dist <- sapply(1:replicates, function(y){
-    #This is the true tree
-    tree <- rtree(size)
-    
-    #Let's now simulate the sequence alignment
-    data <- simSeq(tree, l = 500, type = "DNA", bf = c(.1,.2,.3,.4), Q = 1:6, ancestral = FALSE)
+  
+  #This is the true tree
+  tree <- rtree(size)
+  
+  #Let's now simulate the sequence alignment
+  system(paste0("iqtree2 --alisim ", aln_prefix, " -m ", aln_model, 
+                if(!is.null(aln_I)){paste0("+I{",aln_I,"}")}, 
+                if(!is.null(aln_gamma4C)){paste0("+G4{",aln_gamma4C,"}")}, 
+                " -t tree.nwk -seed 123 --num-alignments ", aln_number,
+                " --length " , aln_length,
+                if(!is.null(aln_indel)){paste0(" --indel ",aln_indel)},
+                " --no-unaligned"
+  ))
+  
+  tfiles <- list.files(pattern = aln_prefix)
+  
+  dist <- sapply(tfiles, function(y){
+    data <- as.phyDat(read.dna(y))
     
     #We need to estimate the distance matrix for the estimated alignment
     dm <- dist.ml(data)
@@ -38,7 +59,7 @@ singleTreeSize <- function(size, replicates){
     
     list("FreqEquivalent" =  FreqSame)
   })
-  dist <- cbind.data.frame(Tree = paste0("Tree_", 1:replicates), "FreqEquivalent" = unlist(dist))
+  
   return(dist)
 }
 res <- singleTreeSize(size = 7, replicates = 100)
