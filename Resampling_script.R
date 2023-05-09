@@ -8,6 +8,12 @@ library(smacof)
 #simulate data & create distant matrix
 set.seed(1)
 
+find_mode <- function(x) {
+  u <- unique(x)
+  tab <- tabulate(match(x, u))
+  u[tab == max(tab)]
+}
+
 #Function to create a number of random trees with size `size`. The same 
 #function fits an MDS and the inverse-MDS for each of the trees. This function
 #also compares the frequency in which inverse-MDS trees match the true tree.
@@ -16,17 +22,19 @@ singleTreeSize <- function(size,
                            replicates, 
                            aln_prefix = "alignment",
                            aln_model = "JC", 
-                           aln_number = 2,
+                           aln_number = 100,
                            aln_length =  1000,
                            aln_gamma4C = NULL,
                            aln_I = NULL,
                            aln_indel = NULL #"0.03,0.1"
 ){
   
+  compReps <- lapply(1:replicates, function(x){
   
   #This is the true tree
   tree <- rtree(size)
-  
+  write.tree(tree, "tree.nwk")
+
   #Let's now simulate the sequence alignment
   system(paste0("iqtree2 --alisim ", aln_prefix, " -m ", aln_model, 
                 if(!is.null(aln_I)){paste0("+I{",aln_I,"}")}, 
@@ -55,16 +63,37 @@ singleTreeSize <- function(size,
     fit_in_trees <- lapply(fit_in, function(x) as.phylo(hclust(x)))
     
     TopDistance <- sapply(fit_in_trees, function(x) dist.topo(unroot(tree), unroot(x)))
-    FreqSame <- length(which(TopDistance == 0))/length(TopDistance)
     
-    list("FreqEquivalent" =  FreqSame)
+    list("TopDistance" =  TopDistance)
   })
   
-  return(dist)
+  #Clean up the folder
+  file.remove(tfiles)
+  file.remove("tree.nwk")
+  
+  #basic stats
+  target <- unlist(dist)
+  return(target)
+  })
+  return(unlist(compReps))
 }
-res <- singleTreeSize(size = 7, replicates = 100)
-hist(res$FreqEquivalent, main = "Frequency of the i-MDS \ntrees matching the true tree")
 
 
+params <- expand.grid(size = c(4, 5, 10, 100, 1000), 
+            model = c("JC", "GTR"),
+            aln_length = c(100, 500, 1000, 10000))
+params$model <- as.character(params$model)
+
+lapply(1:seq_along(params), function(x){
+  
+  partialres <- singleTreeSize(size = params$size[x], 
+                 replicates = 1000, 
+                 aln_model = params$model[x], 
+                 aln_length =  params$aln_length[x])
+  
+  nameFile <- paste0(names(params), params[x,], collapse = "_")
+  write.csv(partialres, paste0(nameFile, ".csv"))
+  
+})
 
 
