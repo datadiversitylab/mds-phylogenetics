@@ -23,12 +23,20 @@ fwrite(results, "Results/complete.csv")
 
 ##
 library(dplyr)
-sumResults <- results %>%
-  group_by(model, AlnSize, TreeSize) %>%
-  summarise_at(.vars = c("x"), .funs = list(mean = mean, sd = sd, min = min, max = max))
+sumResultsCounts <- results %>% 
+  group_by(model, AlnSize, TreeSize, x) %>%
+  summarise(count = n()) %>%
+  mutate(prop = count/sum(count))
 
-fwrite(sumResults, "Results/sumResults.csv")
+fwrite(sumResultsCounts, "Results/sumResults.csv")
 
+library(ggplot2)
+
+
+ggplot(data = sumResultsCounts) +
+  geom_point(aes(x = TreeSize, y = prop, color = ifelse(x == 0, 0, 1))) +
+  ylim(0, 1) +
+  facet_wrap(.~model + AlnSize, ncol = 4)
 
 
 
