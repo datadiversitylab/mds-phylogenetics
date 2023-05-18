@@ -33,11 +33,14 @@ fwrite(sumResultsCounts, "Results/sumResults.csv")
 library(ggplot2)
 
 
-ggplot(data = sumResultsCounts) +
+p <- ggplot(data = sumResultsCounts) +
   geom_point(aes(x = TreeSize, y = prop, color = ifelse(x == 0, 0, 1))) +
   ylim(0, 1) +
   facet_wrap(.~model + AlnSize, ncol = 4)
 
+pdf("Fig1.pdf", 10, 5)
+print(p)
+dev.off()
 
 
 
