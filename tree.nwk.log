@@ -1,0 +1,2618 @@
+IQ-TREE multicore version 2.2.0 COVID-edition for Mac OS X 64-bit built Jun  1 2022
+Developed by Bui Quang Minh, James Barbetti, Nguyen Lam Tung,
+Olga Chernomor, Heiko Schmidt, Dominik Schrempf, Michael Woodhams, Ly Trong Nhan.
+
+Host:    SBS-7526 (AVX512, FMA3, 128 GB RAM)
+Command: iqtree2 --alisim alignment -m JC -t tree.nwk -seed 123 --num-alignments 100 --length 100 --no-unaligned
+Seed:    123 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Tue May 16 23:08:57 2023
+Kernel:  AVX+FMA - 1 threads (24 CPU cores detected)
+
+[Alignment Simulator] Executing
+ - Tree filepath: tree.nwk
+ - Length of output sequences: 100
+ - Model: JC
+ - Number of output datasets: 100
+An alignment has just been exported to alignment_1.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1.000
+  A-G: 1.000
+  A-T: 1.000
+  C-G: 1.000
+  C-T: 1.000
+  G-T: 1.000
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_2.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_3.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_4.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_5.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_6.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_7.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_8.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_9.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_10.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_11.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_12.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_13.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_14.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_15.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_16.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_17.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_18.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_19.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_20.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_21.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_22.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_23.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_24.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_25.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_26.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_27.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_28.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_29.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_30.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_31.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_32.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_33.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_34.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_35.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_36.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_37.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_38.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_39.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_40.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_41.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_42.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_43.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_44.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_45.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_46.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_47.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_48.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_49.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_50.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_51.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_52.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_53.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_54.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_55.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_56.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_57.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_58.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_59.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_60.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_61.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_62.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_63.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_64.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_65.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_66.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_67.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_68.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_69.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_70.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_71.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_72.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_73.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_74.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_75.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_76.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_77.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_78.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_79.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_80.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_81.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_82.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_83.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_84.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_85.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_86.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_87.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_88.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_89.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_90.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_91.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_92.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_93.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_94.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_95.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_96.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_97.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_98.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_99.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+An alignment has just been exported to alignment_100.phy
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: JC
+
+Rate parameter R:
+
+  A-C: 1
+  A-G: 1
+  A-T: 1
+  C-G: 1
+  C-T: 1
+  G-T: 1
+
+State frequencies: (equal frequencies)
+
+Rate matrix Q:
+
+  A        -1     0.333     0.333     0.333
+  C     0.333        -1     0.333     0.333
+  G     0.333     0.333        -1     0.333
+  T     0.333     0.333     0.333        -1
+
+Model of rate heterogeneity: Uniform
+
+[Alignment Simulator] Done
+Simulation time: 0.238s
+Date and Time: Tue May 16 23:08:57 2023

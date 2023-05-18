@@ -3,7 +3,11 @@
 library(ape)
 library(phangorn)
 library(MASS)
-library(smacof)
+
+#packageurl <- "https://cran.r-project.org/src/contrib/Archive/smacof/smacof_1.10-8.tar.gz" 
+#install.packages(packageurl, repos=NULL, type="source")
+library(smacof) #1.10-8
+
 
 #simulate data & create distant matrix
 set.seed(1)
@@ -48,6 +52,7 @@ singleTreeSize <- function(size,
   tfiles <- list.files(pattern = aln_prefix)
   
   dist <- sapply(tfiles, function(y){
+    tryCatch({
     data <- as.phyDat(read.dna(y))
     
     #We need to estimate the distance matrix for the estimated alignment
@@ -60,16 +65,18 @@ singleTreeSize <- function(size,
     
     #performs inverse MDS
     fit_in <- inverseMDS(fit_reg$conf)
-    fit_in_trees <- lapply(fit_in, function(x) as.phylo(hclust(x)))
+    fit_in_trees <- lapply(fit_in$dissmat, function(x) as.phylo(hclust(x)))
     
     TopDistance <- sapply(fit_in_trees, function(x) dist.topo(unroot(tree), unroot(x)))
     
     list("TopDistance" =  TopDistance)
+    }, error=function(e){})
   })
   
   #Clean up the folder
   file.remove(tfiles)
   file.remove("tree.nwk")
+  file.remove("tree.nwk.log")
   
   #basic stats
   target <- unlist(dist)
@@ -79,12 +86,13 @@ singleTreeSize <- function(size,
 }
 
 
-params <- expand.grid(size = c(4, 5, 10, 100, 1000), 
-            model = c("JC", "GTR"),
-            aln_length = c(100, 500, 1000, 10000))
+params <- expand.grid(model = c("JC", "GTR"),
+                      aln_length = c(100, 500, 1000, 10000),
+                      size = c(4, 5, 10, 100, 1000)
+            )
 params$model <- as.character(params$model)
 
-lapply(1:seq_along(params), function(x){
+lapply(1:nrow(params), function(x){
   
   partialres <- singleTreeSize(size = params$size[x], 
                  replicates = 1000, 
@@ -95,5 +103,8 @@ lapply(1:seq_along(params), function(x){
   write.csv(partialres, paste0(nameFile, ".csv"))
   
 })
+
+
+
 
 

@@ -4,3 +4,5 @@
 .Ruserdata
 ML-Phylogenetic-Reconstruction.Rproj
 complete.csv
+*.phy
+.DS_Store
