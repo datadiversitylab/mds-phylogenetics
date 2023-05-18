@@ -1,5 +1,7 @@
 library(data.table)
 library(pbapply)
+library(ggplot2)
+
 fullResults <- list.files("Results/", full.names = TRUE)
 fullResults_names <- list.files("Results/")
 
@@ -30,13 +32,13 @@ sumResultsCounts <- results %>%
 
 fwrite(sumResultsCounts, "Results/sumResults.csv")
 
-library(ggplot2)
-
+sumResultsCounts <- fread("Results/sumResults.csv")
 
 p <- ggplot(data = sumResultsCounts) +
   geom_point(aes(x = TreeSize, y = prop, color = ifelse(x == 0, 0, 1))) +
   ylim(0, 1) +
-  facet_wrap(.~model + AlnSize, ncol = 4)
+  facet_wrap(.~model + AlnSize, ncol = 4) +
+  theme(legend.position = "none")
 
 pdf("Fig1.pdf", 10, 5)
 print(p)
