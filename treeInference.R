@@ -7,7 +7,7 @@ library(phangorn)
 library(smacof) #1.10-8
 
 #Tree building
-size = 100
+size = 10
 replicates = 100
 aln_prefix = "alignment"
 aln_model = "GTR"
@@ -77,7 +77,7 @@ dist_trees <- function(alns = alns, group_size = 4, num_combinations = 10, expor
         dm <- dist.ml(subdata)
         dm[is.na(dm)] <- 0
 
-        fit_reg <- mds(dm, ndim = 2)
+        fit_reg <- mds(dm, ndim = 2) #where's the inverse MDS?
         mds_tree <- as.phylo(hclust(dm))
         mds_tree
         }, error=function(e){})
@@ -94,7 +94,7 @@ dist_trees <- function(alns = alns, group_size = 4, num_combinations = 10, expor
   return(trees_p_aln)
 }
 
-## Reconstruct phylogeny from tree distribution
+## Reconstruct phylogeny from tree distribution (for each alignment)
 alns <- list.files(pattern = "alignment_")
 trees_d <- dist_trees(alns = alns[1:10], group_size = 4, num_combinations = 10)
 
@@ -106,36 +106,40 @@ lapply(treesR, function(y){
 
 ##Read in reconstructed trees and compare them to the true topology
 
+library(treeio)
+
 treesRA <- list.files(pattern = ".out.tre")
-recTrees <- lapply(treesRA, read.tree)
+recTrees <- lapply(treesRA, read.astral)
+recTrees <- lapply(recTrees, function(x){
+  stree <- x@phylo
+  stree$edge.length <- NULL
+  stree
+  })
+
 class(recTrees) <- "multiPhylo"
 
+write.tree(recTrees, "dist.astral.tree")
+
 tree <- read.tree("tree.nwk")
-treeDist <- sapply(recTrees, function(x){
-  dist.topo(unroot(tree), unroot(x))/((length(which(tree$edge[,2] > Ntip(tree))) *2)) #Based on the number of internal branches
+tree$edge.length <- NULL
+treeDist <- lapply(recTrees, function(x){
+  disttopo = dist.topo(unroot(tree), unroot(x))
+  cbind(raw = disttopo, stn =disttopo/((length(which(tree$edge[,2] > Ntip(tree))) *2))) #Based on the number of internal branches
 })
 
+treeDist <-  do.call(rbind, treeDist)
 
-
-require(ape)
-require(dplyr)
 library(ggtree)
+library(ggpubr)
 
-tree_ <- rmtree(1, 10)
-trees <- rmtree(5, 10)
-time.trees <- lapply(1:length(trees), function(i) {
-  tree <- trees[[i]]
-  tree$tip.label <- paste0("t", 1:10)
-  dates <- estimate.dates(tree, 1:10, mu=1, nsteps=1)
-  tree$edge.length <- dates[tree$edge[, 2]] - dates[tree$edge[, 1]]
-  fortify(tree) %>% mutate(tree=factor(i, levels=as.character(1:10)))
-})
-
-# Plot multiple trees with aligned tips from muliple time points
-btrees <- read.tree(system.file("extdata/RAxML",
-                                "RAxML_bootstrap.H3",
-                                package="treeio")
-)[1:10]
-
-ggdensitree(btrees, alpha=.3, colour='steelblue') +
+p1 <- ggdensitree(recTrees, alpha=.3, colour='steelblue',
+            tip.order = tree$tip.label) +
   geom_tiplab(size=3) + hexpand(.35)
+
+p2 <- ggtree(tree, layout="slanted", ladderize = FALSE)+
+  geom_tiplab(size=3) + hexpand(.35)
+
+p3 <- ggarrange(p1, p2)
+
+ggsave("comparisonTree.pdf", p3, width = 100, height = 100, units = "mm")
+
