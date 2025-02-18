@@ -2,22 +2,24 @@ IQ-TREE multicore version 2.2.0 COVID-edition for Mac OS X 64-bit built Jun  1 2
 Developed by Bui Quang Minh, James Barbetti, Nguyen Lam Tung,
 Olga Chernomor, Heiko Schmidt, Dominik Schrempf, Michael Woodhams, Ly Trong Nhan.
 
-Host:    SBS-7526 (AVX512, FMA3, 128 GB RAM)
-Command: iqtree2 --alisim alignment -m JC -t tree.nwk -seed 123 --num-alignments 100 --length 100 --no-unaligned
+Host:    dhcp-10-132-221-194.uawifi.arizona.edu (AVX2, FMA3, 8 GB RAM)
+Command: iqtree2 --alisim alignment -m GTR -t tree.nwk -seed 123 --num-alignments 100 --length 10000 --no-unaligned
 Seed:    123 (Using SPRNG - Scalable Parallel Random Number Generator)
-Time:    Tue May 16 23:08:57 2023
-Kernel:  AVX+FMA - 1 threads (24 CPU cores detected)
+Time:    Mon Feb 17 10:55:56 2025
+Kernel:  AVX+FMA - 1 threads (8 CPU cores detected)
 
 [Alignment Simulator] Executing
+WARNING: Without Inference Mode, we strongly recommend users to specify model parameters for more accuracy simulations. Users could use <Model_Name>{<param_0>/.../<param_n>} to specify the model parameters. For the model GTR, users should provide 5 params (see User Manuals).
+WARNING: GTR must have unequal base frequencies. The base frequencies could be randomly generated if users do not provide them. However, we strongly recommend users specify the base frequencies by using +F{freq1/.../freqN} for better simulation accuracy.
  - Tree filepath: tree.nwk
- - Length of output sequences: 100
- - Model: JC
+ - Length of output sequences: 10000
+ - Model: GTR
  - Number of output datasets: 100
 An alignment has just been exported to alignment_1.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -28,14 +30,19 @@ Rate parameter R:
   C-T: 1.000
   G-T: 1.000
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.224
+  pi(C) = 0.185
+  pi(G) = 0.263
+  pi(T) = 0.329
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A     -1.05      0.25     0.355     0.445
+  C     0.303      -1.1     0.355     0.445
+  G     0.303      0.25    -0.998     0.445
+  T     0.303      0.25     0.355    -0.908
 
 Model of rate heterogeneity: Uniform
 
@@ -43,7 +50,7 @@ An alignment has just been exported to alignment_2.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -54,14 +61,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.281
+  pi(C) = 0.25
+  pi(G) = 0.227
+  pi(T) = 0.241
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A     -0.96     0.334     0.304     0.322
+  C     0.376        -1     0.304     0.322
+  G     0.376     0.334     -1.03     0.322
+  T     0.376     0.334     0.304     -1.01
 
 Model of rate heterogeneity: Uniform
 
@@ -69,7 +81,7 @@ An alignment has just been exported to alignment_3.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -80,14 +92,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.315
+  pi(C) = 0.223
+  pi(G) = 0.205
+  pi(T) = 0.257
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.922       0.3     0.275     0.346
+  C     0.424     -1.05     0.275     0.346
+  G     0.424       0.3     -1.07     0.346
+  T     0.424       0.3     0.275        -1
 
 Model of rate heterogeneity: Uniform
 
@@ -95,7 +112,7 @@ An alignment has just been exported to alignment_4.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -106,14 +123,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.279
+  pi(C) = 0.189
+  pi(G) = 0.242
+  pi(T) = 0.289
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.969     0.254     0.326     0.389
+  C     0.375     -1.09     0.326     0.389
+  G     0.375     0.254     -1.02     0.389
+  T     0.375     0.254     0.326    -0.955
 
 Model of rate heterogeneity: Uniform
 
@@ -121,7 +143,7 @@ An alignment has just been exported to alignment_5.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -132,14 +154,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.339
+  pi(C) = 0.232
+  pi(G) = 0.181
+  pi(T) = 0.248
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.897     0.315     0.245     0.337
+  C      0.46     -1.04     0.245     0.337
+  G      0.46     0.315     -1.11     0.337
+  T      0.46     0.315     0.245     -1.02
 
 Model of rate heterogeneity: Uniform
 
@@ -147,7 +174,7 @@ An alignment has just been exported to alignment_6.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -158,14 +185,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.259
+  pi(C) = 0.22
+  pi(G) = 0.216
+  pi(T) = 0.305
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.994     0.295     0.291     0.409
+  C     0.348     -1.05     0.291     0.409
+  G     0.348     0.295     -1.05     0.409
+  T     0.348     0.295     0.291    -0.934
 
 Model of rate heterogeneity: Uniform
 
@@ -173,7 +205,7 @@ An alignment has just been exported to alignment_7.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -184,14 +216,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.275
+  pi(C) = 0.226
+  pi(G) = 0.216
+  pi(T) = 0.283
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.971     0.303     0.289     0.379
+  C     0.369     -1.04     0.289     0.379
+  G     0.369     0.303     -1.05     0.379
+  T     0.369     0.303     0.289    -0.961
 
 Model of rate heterogeneity: Uniform
 
@@ -199,7 +236,7 @@ An alignment has just been exported to alignment_8.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -210,14 +247,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.375
+  pi(C) = 0.185
+  pi(G) = 0.174
+  pi(T) = 0.266
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.863     0.255      0.24     0.368
+  C     0.519     -1.13      0.24     0.368
+  G     0.519     0.255     -1.14     0.368
+  T     0.519     0.255      0.24     -1.01
 
 Model of rate heterogeneity: Uniform
 
@@ -225,7 +267,7 @@ An alignment has just been exported to alignment_9.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -236,14 +278,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.283
+  pi(C) = 0.233
+  pi(G) = 0.161
+  pi(T) = 0.322
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.974     0.317     0.219     0.438
+  C     0.385     -1.04     0.219     0.438
+  G     0.385     0.317     -1.14     0.438
+  T     0.385     0.317     0.219    -0.922
 
 Model of rate heterogeneity: Uniform
 
@@ -251,7 +298,7 @@ An alignment has just been exported to alignment_10.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -262,14 +309,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.286
+  pi(C) = 0.221
+  pi(G) = 0.199
+  pi(T) = 0.293
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A     -0.96     0.298     0.268     0.394
+  C     0.385     -1.05     0.268     0.394
+  G     0.385     0.298     -1.08     0.394
+  T     0.385     0.298     0.268    -0.951
 
 Model of rate heterogeneity: Uniform
 
@@ -277,7 +329,7 @@ An alignment has just been exported to alignment_11.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -288,14 +340,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.377
+  pi(C) = 0.223
+  pi(G) = 0.167
+  pi(T) = 0.234
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.859     0.306      0.23     0.322
+  C     0.519     -1.07      0.23     0.322
+  G     0.519     0.306     -1.15     0.322
+  T     0.519     0.306      0.23     -1.05
 
 Model of rate heterogeneity: Uniform
 
@@ -303,7 +360,7 @@ An alignment has just been exported to alignment_12.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -314,14 +371,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.287
+  pi(C) = 0.266
+  pi(G) = 0.327
+  pi(T) = 0.12
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.982     0.367      0.45     0.166
+  C     0.396     -1.01      0.45     0.166
+  G     0.396     0.367    -0.928     0.166
+  T     0.396     0.367      0.45     -1.21
 
 Model of rate heterogeneity: Uniform
 
@@ -329,7 +391,7 @@ An alignment has just been exported to alignment_13.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -340,14 +402,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.302
+  pi(C) = 0.206
+  pi(G) = 0.195
+  pi(T) = 0.297
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.943     0.279     0.264     0.401
+  C     0.407     -1.07     0.264     0.401
+  G     0.407     0.279     -1.09     0.401
+  T     0.407     0.279     0.264     -0.95
 
 Model of rate heterogeneity: Uniform
 
@@ -355,7 +422,7 @@ An alignment has just been exported to alignment_14.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -366,14 +433,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.0998
+  pi(C) = 0.362
+  pi(G) = 0.298
+  pi(T) = 0.24
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A     -1.26     0.508     0.419     0.337
+  C      0.14    -0.896     0.419     0.337
+  G      0.14     0.508    -0.985     0.337
+  T      0.14     0.508     0.419     -1.07
 
 Model of rate heterogeneity: Uniform
 
@@ -381,7 +453,7 @@ An alignment has just been exported to alignment_15.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -392,14 +464,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.274
+  pi(C) = 0.2
+  pi(G) = 0.224
+  pi(T) = 0.302
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.977     0.269     0.302     0.406
+  C     0.368     -1.08     0.302     0.406
+  G     0.368     0.269     -1.04     0.406
+  T     0.368     0.269     0.302    -0.938
 
 Model of rate heterogeneity: Uniform
 
@@ -407,7 +484,7 @@ An alignment has just been exported to alignment_16.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -418,14 +495,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.26
+  pi(C) = 0.279
+  pi(G) = 0.22
+  pi(T) = 0.24
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.989     0.373     0.294     0.321
+  C     0.348    -0.963     0.294     0.321
+  G     0.348     0.373     -1.04     0.321
+  T     0.348     0.373     0.294     -1.02
 
 Model of rate heterogeneity: Uniform
 
@@ -433,7 +515,7 @@ An alignment has just been exported to alignment_17.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -444,14 +526,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.265
+  pi(C) = 0.295
+  pi(G) = 0.22
+  pi(T) = 0.221
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.985     0.395     0.295     0.296
+  C     0.355    -0.946     0.295     0.296
+  G     0.355     0.395     -1.05     0.296
+  T     0.355     0.395     0.295     -1.04
 
 Model of rate heterogeneity: Uniform
 
@@ -459,7 +546,7 @@ An alignment has just been exported to alignment_18.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -470,14 +557,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.322
+  pi(C) = 0.16
+  pi(G) = 0.21
+  pi(T) = 0.308
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.926     0.219     0.287      0.42
+  C      0.44     -1.15     0.287      0.42
+  G      0.44     0.219     -1.08      0.42
+  T      0.44     0.219     0.287    -0.946
 
 Model of rate heterogeneity: Uniform
 
@@ -485,7 +577,7 @@ An alignment has just been exported to alignment_19.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -496,14 +588,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.309
+  pi(C) = 0.326
+  pi(G) = 0.149
+  pi(T) = 0.217
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.948     0.446     0.205     0.297
+  C     0.423    -0.924     0.205     0.297
+  G     0.423     0.446     -1.17     0.297
+  T     0.423     0.446     0.205     -1.07
 
 Model of rate heterogeneity: Uniform
 
@@ -511,7 +608,7 @@ An alignment has just been exported to alignment_20.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -522,14 +619,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.272
+  pi(C) = 0.177
+  pi(G) = 0.248
+  pi(T) = 0.303
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.982     0.239     0.334     0.409
+  C     0.367     -1.11     0.334     0.409
+  G     0.367     0.239     -1.01     0.409
+  T     0.367     0.239     0.334     -0.94
 
 Model of rate heterogeneity: Uniform
 
@@ -537,7 +639,7 @@ An alignment has just been exported to alignment_21.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -548,14 +650,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.216
+  pi(C) = 0.324
+  pi(G) = 0.186
+  pi(T) = 0.273
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A     -1.06     0.439     0.252      0.37
+  C     0.293    -0.915     0.252      0.37
+  G     0.293     0.439      -1.1      0.37
+  T     0.293     0.439     0.252    -0.984
 
 Model of rate heterogeneity: Uniform
 
@@ -563,7 +670,7 @@ An alignment has just been exported to alignment_22.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -574,14 +681,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.251
+  pi(C) = 0.249
+  pi(G) = 0.303
+  pi(T) = 0.197
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A     -1.01     0.334     0.408     0.264
+  C     0.338     -1.01     0.408     0.264
+  G     0.338     0.334    -0.936     0.264
+  T     0.338     0.334     0.408     -1.08
 
 Model of rate heterogeneity: Uniform
 
@@ -589,7 +701,7 @@ An alignment has just been exported to alignment_23.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -600,14 +712,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.318
+  pi(C) = 0.263
+  pi(G) = 0.213
+  pi(T) = 0.205
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.919     0.355     0.287     0.277
+  C     0.429    -0.993     0.287     0.277
+  G     0.429     0.355     -1.06     0.277
+  T     0.429     0.355     0.287     -1.07
 
 Model of rate heterogeneity: Uniform
 
@@ -615,7 +732,7 @@ An alignment has just been exported to alignment_24.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -626,14 +743,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.313
+  pi(C) = 0.226
+  pi(G) = 0.159
+  pi(T) = 0.301
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.935     0.308     0.217      0.41
+  C     0.427     -1.05     0.217      0.41
+  G     0.427     0.308     -1.14      0.41
+  T     0.427     0.308     0.217    -0.951
 
 Model of rate heterogeneity: Uniform
 
@@ -641,7 +763,7 @@ An alignment has just been exported to alignment_25.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -652,14 +774,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.239
+  pi(C) = 0.182
+  pi(G) = 0.349
+  pi(T) = 0.23
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A     -1.04     0.248     0.475     0.313
+  C     0.325     -1.11     0.475     0.313
+  G     0.325     0.248    -0.885     0.313
+  T     0.325     0.248     0.475     -1.05
 
 Model of rate heterogeneity: Uniform
 
@@ -667,7 +794,7 @@ An alignment has just been exported to alignment_26.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -678,14 +805,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.16
+  pi(C) = 0.222
+  pi(G) = 0.23
+  pi(T) = 0.388
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A     -1.16     0.308     0.319     0.538
+  C     0.221     -1.08     0.319     0.538
+  G     0.221     0.308     -1.07     0.538
+  T     0.221     0.308     0.319    -0.848
 
 Model of rate heterogeneity: Uniform
 
@@ -693,7 +825,7 @@ An alignment has just been exported to alignment_27.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -704,14 +836,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.321
+  pi(C) = 0.196
+  pi(G) = 0.296
+  pi(T) = 0.186
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.923     0.267     0.403     0.253
+  C     0.436     -1.09     0.403     0.253
+  G     0.436     0.267    -0.956     0.253
+  T     0.436     0.267     0.403     -1.11
 
 Model of rate heterogeneity: Uniform
 
@@ -719,7 +856,7 @@ An alignment has just been exported to alignment_28.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -730,14 +867,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.268
+  pi(C) = 0.186
+  pi(G) = 0.205
+  pi(T) = 0.341
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.996     0.253     0.279     0.464
+  C     0.364     -1.11     0.279     0.464
+  G     0.364     0.253     -1.08     0.464
+  T     0.364     0.253     0.279    -0.896
 
 Model of rate heterogeneity: Uniform
 
@@ -745,7 +887,7 @@ An alignment has just been exported to alignment_29.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -756,14 +898,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.324
+  pi(C) = 0.19
+  pi(G) = 0.34
+  pi(T) = 0.146
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.936     0.264      0.47     0.202
+  C     0.449     -1.12      0.47     0.202
+  G     0.449     0.264    -0.915     0.202
+  T     0.449     0.264      0.47     -1.18
 
 Model of rate heterogeneity: Uniform
 
@@ -771,7 +918,7 @@ An alignment has just been exported to alignment_30.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -782,14 +929,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.272
+  pi(C) = 0.208
+  pi(G) = 0.283
+  pi(T) = 0.237
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.975     0.278     0.379     0.317
+  C     0.365     -1.06     0.379     0.317
+  G     0.365     0.278     -0.96     0.317
+  T     0.365     0.278     0.379     -1.02
 
 Model of rate heterogeneity: Uniform
 
@@ -797,7 +949,7 @@ An alignment has just been exported to alignment_31.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -808,14 +960,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.325
+  pi(C) = 0.249
+  pi(G) = 0.171
+  pi(T) = 0.256
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.915     0.337     0.231     0.346
+  C      0.44     -1.02     0.231     0.346
+  G      0.44     0.337     -1.12     0.346
+  T      0.44     0.337     0.231     -1.01
 
 Model of rate heterogeneity: Uniform
 
@@ -823,7 +980,7 @@ An alignment has just been exported to alignment_32.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -834,14 +991,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.276
+  pi(C) = 0.194
+  pi(G) = 0.297
+  pi(T) = 0.232
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.973     0.261       0.4     0.312
+  C     0.372     -1.08       0.4     0.312
+  G     0.372     0.261    -0.945     0.312
+  T     0.372     0.261       0.4     -1.03
 
 Model of rate heterogeneity: Uniform
 
@@ -849,7 +1011,7 @@ An alignment has just been exported to alignment_33.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -860,14 +1022,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.3
+  pi(C) = 0.226
+  pi(G) = 0.211
+  pi(T) = 0.263
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.939     0.303     0.284     0.352
+  C     0.403     -1.04     0.284     0.352
+  G     0.403     0.303     -1.06     0.352
+  T     0.403     0.303     0.284     -0.99
 
 Model of rate heterogeneity: Uniform
 
@@ -875,7 +1042,7 @@ An alignment has just been exported to alignment_34.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -886,14 +1053,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.289
+  pi(C) = 0.215
+  pi(G) = 0.23
+  pi(T) = 0.266
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.952     0.288     0.308     0.356
+  C     0.388     -1.05     0.308     0.356
+  G     0.388     0.288     -1.03     0.356
+  T     0.388     0.288     0.308    -0.984
 
 Model of rate heterogeneity: Uniform
 
@@ -901,7 +1073,7 @@ An alignment has just been exported to alignment_35.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -912,14 +1084,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.29
+  pi(C) = 0.21
+  pi(G) = 0.272
+  pi(T) = 0.228
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.952     0.282     0.365     0.306
+  C     0.389     -1.06     0.365     0.306
+  G     0.389     0.282    -0.976     0.306
+  T     0.389     0.282     0.365     -1.04
 
 Model of rate heterogeneity: Uniform
 
@@ -927,7 +1104,7 @@ An alignment has just been exported to alignment_36.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -938,14 +1115,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.235
+  pi(C) = 0.245
+  pi(G) = 0.17
+  pi(T) = 0.351
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A     -1.04     0.334     0.232     0.478
+  C      0.32     -1.03     0.232     0.478
+  G      0.32     0.334     -1.13     0.478
+  T      0.32     0.334     0.232    -0.886
 
 Model of rate heterogeneity: Uniform
 
@@ -953,7 +1135,7 @@ An alignment has just been exported to alignment_37.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -964,14 +1146,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.277
+  pi(C) = 0.298
+  pi(G) = 0.21
+  pi(T) = 0.215
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.971       0.4     0.283     0.289
+  C     0.372    -0.944     0.283     0.289
+  G     0.372       0.4     -1.06     0.289
+  T     0.372       0.4     0.283     -1.05
 
 Model of rate heterogeneity: Uniform
 
@@ -979,7 +1166,7 @@ An alignment has just been exported to alignment_38.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -990,14 +1177,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.295
+  pi(C) = 0.197
+  pi(G) = 0.272
+  pi(T) = 0.237
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.947     0.264     0.365     0.319
+  C     0.396     -1.08     0.365     0.319
+  G     0.396     0.264    -0.978     0.319
+  T     0.396     0.264     0.365     -1.02
 
 Model of rate heterogeneity: Uniform
 
@@ -1005,7 +1197,7 @@ An alignment has just been exported to alignment_39.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -1016,14 +1208,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.347
+  pi(C) = 0.24
+  pi(G) = 0.251
+  pi(T) = 0.162
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.891     0.327     0.343     0.221
+  C     0.473     -1.04     0.343     0.221
+  G     0.473     0.327     -1.02     0.221
+  T     0.473     0.327     0.343     -1.14
 
 Model of rate heterogeneity: Uniform
 
@@ -1031,7 +1228,7 @@ An alignment has just been exported to alignment_40.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -1042,14 +1239,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.232
+  pi(C) = 0.215
+  pi(G) = 0.24
+  pi(T) = 0.313
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A     -1.03     0.289     0.322     0.421
+  C     0.312     -1.05     0.322     0.421
+  G     0.312     0.289     -1.02     0.421
+  T     0.312     0.289     0.322    -0.923
 
 Model of rate heterogeneity: Uniform
 
@@ -1057,7 +1259,7 @@ An alignment has just been exported to alignment_41.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -1068,14 +1270,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.0824
+  pi(C) = 0.303
+  pi(G) = 0.221
+  pi(T) = 0.394
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A     -1.32     0.434     0.317     0.564
+  C     0.118    -0.999     0.317     0.564
+  G     0.118     0.434     -1.12     0.564
+  T     0.118     0.434     0.317    -0.869
 
 Model of rate heterogeneity: Uniform
 
@@ -1083,7 +1290,7 @@ An alignment has just been exported to alignment_42.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -1094,14 +1301,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.29
+  pi(C) = 0.147
+  pi(G) = 0.313
+  pi(T) = 0.25
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.968     0.201     0.427      0.34
+  C     0.395     -1.16     0.427      0.34
+  G     0.395     0.201    -0.936      0.34
+  T     0.395     0.201     0.427     -1.02
 
 Model of rate heterogeneity: Uniform
 
@@ -1109,7 +1321,7 @@ An alignment has just been exported to alignment_43.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -1120,14 +1332,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.28
+  pi(C) = 0.238
+  pi(G) = 0.142
+  pi(T) = 0.339
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.987     0.326     0.195     0.465
+  C     0.384     -1.04     0.195     0.465
+  G     0.384     0.326     -1.18     0.465
+  T     0.384     0.326     0.195    -0.906
 
 Model of rate heterogeneity: Uniform
 
@@ -1135,7 +1352,7 @@ An alignment has just been exported to alignment_44.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -1146,14 +1363,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.16
+  pi(C) = 0.302
+  pi(G) = 0.234
+  pi(T) = 0.305
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A     -1.14      0.41     0.318     0.414
+  C     0.217    -0.949     0.318     0.414
+  G     0.217      0.41     -1.04     0.414
+  T     0.217      0.41     0.318    -0.945
 
 Model of rate heterogeneity: Uniform
 
@@ -1161,7 +1383,7 @@ An alignment has just been exported to alignment_45.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -1172,14 +1394,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.246
+  pi(C) = 0.221
+  pi(G) = 0.198
+  pi(T) = 0.335
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A     -1.02     0.299     0.268     0.453
+  C     0.332     -1.05     0.268     0.453
+  G     0.332     0.299     -1.08     0.453
+  T     0.332     0.299     0.268    -0.899
 
 Model of rate heterogeneity: Uniform
 
@@ -1187,7 +1414,7 @@ An alignment has just been exported to alignment_46.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -1198,14 +1425,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.277
+  pi(C) = 0.283
+  pi(G) = 0.22
+  pi(T) = 0.219
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.968     0.379     0.295     0.294
+  C     0.372    -0.961     0.295     0.294
+  G     0.372     0.379     -1.04     0.294
+  T     0.372     0.379     0.295     -1.05
 
 Model of rate heterogeneity: Uniform
 
@@ -1213,7 +1445,7 @@ An alignment has just been exported to alignment_47.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -1224,14 +1456,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.271
+  pi(C) = 0.227
+  pi(G) = 0.205
+  pi(T) = 0.297
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.979     0.305     0.276     0.399
+  C     0.363     -1.04     0.276     0.399
+  G     0.363     0.305     -1.07     0.399
+  T     0.363     0.305     0.276    -0.944
 
 Model of rate heterogeneity: Uniform
 
@@ -1239,7 +1476,7 @@ An alignment has just been exported to alignment_48.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -1250,14 +1487,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.246
+  pi(C) = 0.221
+  pi(G) = 0.181
+  pi(T) = 0.352
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A     -1.03     0.301     0.247      0.48
+  C     0.335     -1.06     0.247      0.48
+  G     0.335     0.301     -1.12      0.48
+  T     0.335     0.301     0.247    -0.883
 
 Model of rate heterogeneity: Uniform
 
@@ -1265,7 +1507,7 @@ An alignment has just been exported to alignment_49.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -1276,14 +1518,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.254
+  pi(C) = 0.185
+  pi(G) = 0.289
+  pi(T) = 0.272
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A        -1     0.249     0.389     0.366
+  C     0.341      -1.1     0.389     0.366
+  G     0.341     0.249    -0.955     0.366
+  T     0.341     0.249     0.389    -0.979
 
 Model of rate heterogeneity: Uniform
 
@@ -1291,7 +1538,7 @@ An alignment has just been exported to alignment_50.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -1302,14 +1549,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.291
+  pi(C) = 0.245
+  pi(G) = 0.255
+  pi(T) = 0.21
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A     -0.95     0.327     0.341     0.281
+  C      0.39     -1.01     0.341     0.281
+  G      0.39     0.327    -0.998     0.281
+  T      0.39     0.327     0.341     -1.06
 
 Model of rate heterogeneity: Uniform
 
@@ -1317,7 +1569,7 @@ An alignment has just been exported to alignment_51.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -1328,14 +1580,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.264
+  pi(C) = 0.242
+  pi(G) = 0.26
+  pi(T) = 0.234
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.982     0.323     0.346     0.313
+  C     0.352     -1.01     0.346     0.313
+  G     0.352     0.323    -0.988     0.313
+  T     0.352     0.323     0.346     -1.02
 
 Model of rate heterogeneity: Uniform
 
@@ -1343,7 +1600,7 @@ An alignment has just been exported to alignment_52.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -1354,14 +1611,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.312
+  pi(C) = 0.233
+  pi(G) = 0.182
+  pi(T) = 0.273
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.929     0.315     0.246     0.368
+  C     0.421     -1.04     0.246     0.368
+  G     0.421     0.315      -1.1     0.368
+  T     0.421     0.315     0.246    -0.982
 
 Model of rate heterogeneity: Uniform
 
@@ -1369,7 +1631,7 @@ An alignment has just been exported to alignment_53.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -1380,14 +1642,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.275
+  pi(C) = 0.191
+  pi(G) = 0.272
+  pi(T) = 0.262
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.973     0.256     0.365     0.352
+  C     0.369     -1.09     0.365     0.352
+  G     0.369     0.256    -0.977     0.352
+  T     0.369     0.256     0.365     -0.99
 
 Model of rate heterogeneity: Uniform
 
@@ -1395,7 +1662,7 @@ An alignment has just been exported to alignment_54.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -1406,14 +1673,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.276
+  pi(C) = 0.155
+  pi(G) = 0.241
+  pi(T) = 0.328
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.986     0.211     0.328     0.447
+  C     0.376     -1.15     0.328     0.447
+  G     0.376     0.211     -1.03     0.447
+  T     0.376     0.211     0.328    -0.915
 
 Model of rate heterogeneity: Uniform
 
@@ -1421,7 +1693,7 @@ An alignment has just been exported to alignment_55.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -1432,14 +1704,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.304
+  pi(C) = 0.166
+  pi(G) = 0.219
+  pi(T) = 0.311
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.946     0.226     0.298     0.422
+  C     0.414     -1.13     0.298     0.422
+  G     0.414     0.226     -1.06     0.422
+  T     0.414     0.226     0.298    -0.938
 
 Model of rate heterogeneity: Uniform
 
@@ -1447,7 +1724,7 @@ An alignment has just been exported to alignment_56.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -1458,14 +1735,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.389
+  pi(C) = 0.219
+  pi(G) = 0.25
+  pi(T) = 0.142
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.851     0.305     0.349     0.198
+  C     0.542     -1.09     0.349     0.198
+  G     0.542     0.305     -1.04     0.198
+  T     0.542     0.305     0.349      -1.2
 
 Model of rate heterogeneity: Uniform
 
@@ -1473,7 +1755,7 @@ An alignment has just been exported to alignment_57.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -1484,14 +1766,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.402
+  pi(C) = 0.198
+  pi(G) = 0.196
+  pi(T) = 0.204
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.832     0.276     0.272     0.284
+  C     0.559     -1.11     0.272     0.284
+  G     0.559     0.276     -1.12     0.284
+  T     0.559     0.276     0.272     -1.11
 
 Model of rate heterogeneity: Uniform
 
@@ -1499,7 +1786,7 @@ An alignment has just been exported to alignment_58.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -1510,14 +1797,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.23
+  pi(C) = 0.207
+  pi(G) = 0.211
+  pi(T) = 0.353
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A     -1.05     0.281     0.286      0.48
+  C     0.312     -1.08     0.286      0.48
+  G     0.312     0.281     -1.07      0.48
+  T     0.312     0.281     0.286     -0.88
 
 Model of rate heterogeneity: Uniform
 
@@ -1525,7 +1817,7 @@ An alignment has just been exported to alignment_59.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -1536,14 +1828,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.277
+  pi(C) = 0.203
+  pi(G) = 0.305
+  pi(T) = 0.216
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.974     0.273      0.41     0.291
+  C     0.372     -1.07      0.41     0.291
+  G     0.372     0.273    -0.936     0.291
+  T     0.372     0.273      0.41     -1.06
 
 Model of rate heterogeneity: Uniform
 
@@ -1551,7 +1848,7 @@ An alignment has just been exported to alignment_60.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -1562,14 +1859,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.295
+  pi(C) = 0.196
+  pi(G) = 0.26
+  pi(T) = 0.249
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.946     0.264     0.349     0.334
+  C     0.396     -1.08     0.349     0.334
+  G     0.396     0.264    -0.993     0.334
+  T     0.396     0.264     0.349     -1.01
 
 Model of rate heterogeneity: Uniform
 
@@ -1577,7 +1879,7 @@ An alignment has just been exported to alignment_61.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -1588,14 +1890,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.268
+  pi(C) = 0.247
+  pi(G) = 0.303
+  pi(T) = 0.181
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.986     0.333     0.408     0.244
+  C     0.362     -1.01     0.408     0.244
+  G     0.362     0.333     -0.94     0.244
+  T     0.362     0.333     0.408      -1.1
 
 Model of rate heterogeneity: Uniform
 
@@ -1603,7 +1910,7 @@ An alignment has just been exported to alignment_62.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -1614,14 +1921,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.23
+  pi(C) = 0.139
+  pi(G) = 0.271
+  pi(T) = 0.36
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A     -1.06     0.191     0.374     0.497
+  C     0.318     -1.19     0.374     0.497
+  G     0.318     0.191     -1.01     0.497
+  T     0.318     0.191     0.374    -0.883
 
 Model of rate heterogeneity: Uniform
 
@@ -1629,7 +1941,7 @@ An alignment has just been exported to alignment_63.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -1640,14 +1952,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.346
+  pi(C) = 0.147
+  pi(G) = 0.191
+  pi(T) = 0.317
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.906     0.203     0.264     0.438
+  C     0.479     -1.18     0.264     0.438
+  G     0.479     0.203     -1.12     0.438
+  T     0.479     0.203     0.264    -0.946
 
 Model of rate heterogeneity: Uniform
 
@@ -1655,7 +1972,7 @@ An alignment has just been exported to alignment_64.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -1666,14 +1983,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.347
+  pi(C) = 0.202
+  pi(G) = 0.239
+  pi(T) = 0.212
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.887     0.274     0.325     0.288
+  C     0.471     -1.08     0.325     0.288
+  G     0.471     0.274     -1.03     0.288
+  T     0.471     0.274     0.325     -1.07
 
 Model of rate heterogeneity: Uniform
 
@@ -1681,7 +2003,7 @@ An alignment has just been exported to alignment_65.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -1692,14 +2014,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.279
+  pi(C) = 0.205
+  pi(G) = 0.234
+  pi(T) = 0.283
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.967     0.274     0.314     0.379
+  C     0.373     -1.07     0.314     0.379
+  G     0.373     0.274     -1.03     0.379
+  T     0.373     0.274     0.314    -0.962
 
 Model of rate heterogeneity: Uniform
 
@@ -1707,7 +2034,7 @@ An alignment has just been exported to alignment_66.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -1718,14 +2045,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.274
+  pi(C) = 0.195
+  pi(G) = 0.243
+  pi(T) = 0.288
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.974     0.262     0.327     0.386
+  C     0.368     -1.08     0.327     0.386
+  G     0.368     0.262     -1.02     0.386
+  T     0.368     0.262     0.327    -0.956
 
 Model of rate heterogeneity: Uniform
 
@@ -1733,7 +2065,7 @@ An alignment has just been exported to alignment_67.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -1744,14 +2076,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.338
+  pi(C) = 0.175
+  pi(G) = 0.209
+  pi(T) = 0.279
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.902     0.238     0.284     0.379
+  C     0.461     -1.12     0.284     0.379
+  G     0.461     0.238     -1.08     0.379
+  T     0.461     0.238     0.284    -0.983
 
 Model of rate heterogeneity: Uniform
 
@@ -1759,7 +2096,7 @@ An alignment has just been exported to alignment_68.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -1770,14 +2107,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.338
+  pi(C) = 0.243
+  pi(G) = 0.226
+  pi(T) = 0.193
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.896     0.329     0.306     0.261
+  C     0.458     -1.03     0.306     0.261
+  G     0.458     0.329     -1.05     0.261
+  T     0.458     0.329     0.306     -1.09
 
 Model of rate heterogeneity: Uniform
 
@@ -1785,7 +2127,7 @@ An alignment has just been exported to alignment_69.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -1796,14 +2138,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.276
+  pi(C) = 0.207
+  pi(G) = 0.261
+  pi(T) = 0.256
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.969     0.277      0.35     0.343
+  C     0.369     -1.06      0.35     0.343
+  G     0.369     0.277    -0.988     0.343
+  T     0.369     0.277      0.35    -0.995
 
 Model of rate heterogeneity: Uniform
 
@@ -1811,7 +2158,7 @@ An alignment has just been exported to alignment_70.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -1822,14 +2169,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.295
+  pi(C) = 0.158
+  pi(G) = 0.236
+  pi(T) = 0.311
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.958     0.215     0.321     0.422
+  C     0.402     -1.14     0.321     0.422
+  G     0.402     0.215     -1.04     0.422
+  T     0.402     0.215     0.321    -0.937
 
 Model of rate heterogeneity: Uniform
 
@@ -1837,7 +2189,7 @@ An alignment has just been exported to alignment_71.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -1848,14 +2200,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.299
+  pi(C) = 0.197
+  pi(G) = 0.31
+  pi(T) = 0.195
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A     -0.95     0.266      0.42     0.264
+  C     0.405     -1.09      0.42     0.264
+  G     0.405     0.266    -0.935     0.264
+  T     0.405     0.266      0.42     -1.09
 
 Model of rate heterogeneity: Uniform
 
@@ -1863,7 +2220,7 @@ An alignment has just been exported to alignment_72.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -1874,14 +2231,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.273
+  pi(C) = 0.147
+  pi(G) = 0.34
+  pi(T) = 0.241
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.995     0.201     0.465     0.329
+  C     0.373     -1.17     0.465     0.329
+  G     0.373     0.201    -0.903     0.329
+  T     0.373     0.201     0.465     -1.04
 
 Model of rate heterogeneity: Uniform
 
@@ -1889,7 +2251,7 @@ An alignment has just been exported to alignment_73.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -1900,14 +2262,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.383
+  pi(C) = 0.212
+  pi(G) = 0.227
+  pi(T) = 0.178
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.851     0.293     0.313     0.245
+  C     0.529     -1.09     0.313     0.245
+  G     0.529     0.293     -1.07     0.245
+  T     0.529     0.293     0.313     -1.13
 
 Model of rate heterogeneity: Uniform
 
@@ -1915,7 +2282,7 @@ An alignment has just been exported to alignment_74.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -1926,14 +2293,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.23
+  pi(C) = 0.224
+  pi(G) = 0.239
+  pi(T) = 0.307
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A     -1.03     0.301      0.32     0.412
+  C     0.308     -1.04      0.32     0.412
+  G     0.308     0.301     -1.02     0.412
+  T     0.308     0.301      0.32    -0.929
 
 Model of rate heterogeneity: Uniform
 
@@ -1941,7 +2313,7 @@ An alignment has just been exported to alignment_75.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -1952,14 +2324,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.304
+  pi(C) = 0.251
+  pi(G) = 0.163
+  pi(T) = 0.281
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.942      0.34     0.221     0.381
+  C     0.412     -1.01     0.221     0.381
+  G     0.412      0.34     -1.13     0.381
+  T     0.412      0.34     0.221    -0.973
 
 Model of rate heterogeneity: Uniform
 
@@ -1967,7 +2344,7 @@ An alignment has just been exported to alignment_76.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -1978,14 +2355,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.274
+  pi(C) = 0.347
+  pi(G) = 0.152
+  pi(T) = 0.227
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.994     0.475     0.208     0.312
+  C     0.376    -0.895     0.208     0.312
+  G     0.376     0.475     -1.16     0.312
+  T     0.376     0.475     0.208     -1.06
 
 Model of rate heterogeneity: Uniform
 
@@ -1993,7 +2375,7 @@ An alignment has just been exported to alignment_77.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -2004,14 +2386,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.275
+  pi(C) = 0.238
+  pi(G) = 0.224
+  pi(T) = 0.263
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.968     0.318       0.3     0.351
+  C     0.368     -1.02       0.3     0.351
+  G     0.368     0.318     -1.04     0.351
+  T     0.368     0.318       0.3    -0.985
 
 Model of rate heterogeneity: Uniform
 
@@ -2019,7 +2406,7 @@ An alignment has just been exported to alignment_78.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -2030,14 +2417,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.287
+  pi(C) = 0.192
+  pi(G) = 0.326
+  pi(T) = 0.195
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.968      0.26     0.443     0.265
+  C      0.39      -1.1     0.443     0.265
+  G      0.39      0.26    -0.915     0.265
+  T      0.39      0.26     0.443     -1.09
 
 Model of rate heterogeneity: Uniform
 
@@ -2045,7 +2437,7 @@ An alignment has just been exported to alignment_79.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -2056,14 +2448,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.299
+  pi(C) = 0.238
+  pi(G) = 0.155
+  pi(T) = 0.308
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.953     0.323     0.211     0.419
+  C     0.407     -1.04     0.211     0.419
+  G     0.407     0.323     -1.15     0.419
+  T     0.407     0.323     0.211    -0.941
 
 Model of rate heterogeneity: Uniform
 
@@ -2071,7 +2468,7 @@ An alignment has just been exported to alignment_80.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -2082,14 +2479,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.213
+  pi(C) = 0.286
+  pi(G) = 0.178
+  pi(T) = 0.323
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A     -1.07     0.389     0.242     0.438
+  C     0.289    -0.968     0.242     0.438
+  G     0.289     0.389     -1.12     0.438
+  T     0.289     0.389     0.242    -0.919
 
 Model of rate heterogeneity: Uniform
 
@@ -2097,7 +2499,7 @@ An alignment has just been exported to alignment_81.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -2108,14 +2510,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.305
+  pi(C) = 0.251
+  pi(G) = 0.135
+  pi(T) = 0.309
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.952     0.344     0.185     0.423
+  C     0.417     -1.03     0.185     0.423
+  G     0.417     0.344     -1.18     0.423
+  T     0.417     0.344     0.185    -0.946
 
 Model of rate heterogeneity: Uniform
 
@@ -2123,7 +2530,7 @@ An alignment has just been exported to alignment_82.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -2134,14 +2541,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.172
+  pi(C) = 0.192
+  pi(G) = 0.264
+  pi(T) = 0.372
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A     -1.14     0.264     0.364     0.513
+  C     0.237     -1.11     0.364     0.513
+  G     0.237     0.264     -1.01     0.513
+  T     0.237     0.264     0.364    -0.866
 
 Model of rate heterogeneity: Uniform
 
@@ -2149,7 +2561,7 @@ An alignment has just been exported to alignment_83.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -2160,14 +2572,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.0967
+  pi(C) = 0.285
+  pi(G) = 0.274
+  pi(T) = 0.345
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A     -1.26     0.398     0.382     0.482
+  C     0.135    -0.999     0.382     0.482
+  G     0.135     0.398     -1.01     0.482
+  T     0.135     0.398     0.382    -0.915
 
 Model of rate heterogeneity: Uniform
 
@@ -2175,7 +2592,7 @@ An alignment has just been exported to alignment_84.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -2186,14 +2603,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.311
+  pi(C) = 0.229
+  pi(G) = 0.218
+  pi(T) = 0.242
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.925     0.307     0.293     0.325
+  C     0.417     -1.04     0.293     0.325
+  G     0.417     0.307     -1.05     0.325
+  T     0.417     0.307     0.293     -1.02
 
 Model of rate heterogeneity: Uniform
 
@@ -2201,7 +2623,7 @@ An alignment has just been exported to alignment_85.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -2212,14 +2634,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.226
+  pi(C) = 0.243
+  pi(G) = 0.292
+  pi(T) = 0.239
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A     -1.03     0.325      0.39      0.32
+  C     0.303     -1.01      0.39      0.32
+  G     0.303     0.325    -0.948      0.32
+  T     0.303     0.325      0.39     -1.02
 
 Model of rate heterogeneity: Uniform
 
@@ -2227,7 +2654,7 @@ An alignment has just been exported to alignment_86.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -2238,14 +2665,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.301
+  pi(C) = 0.287
+  pi(G) = 0.21
+  pi(T) = 0.201
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.942     0.387     0.284     0.271
+  C     0.406    -0.961     0.284     0.271
+  G     0.406     0.387     -1.06     0.271
+  T     0.406     0.387     0.284     -1.08
 
 Model of rate heterogeneity: Uniform
 
@@ -2253,7 +2685,7 @@ An alignment has just been exported to alignment_87.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -2264,14 +2696,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.291
+  pi(C) = 0.207
+  pi(G) = 0.198
+  pi(T) = 0.303
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.956      0.28     0.268     0.409
+  C     0.393     -1.07     0.268     0.409
+  G     0.393      0.28     -1.08     0.409
+  T     0.393      0.28     0.268    -0.941
 
 Model of rate heterogeneity: Uniform
 
@@ -2279,7 +2716,7 @@ An alignment has just been exported to alignment_88.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -2290,14 +2727,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.191
+  pi(C) = 0.302
+  pi(G) = 0.231
+  pi(T) = 0.276
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A     -1.09     0.406     0.311     0.372
+  C     0.257     -0.94     0.311     0.372
+  G     0.257     0.406     -1.03     0.372
+  T     0.257     0.406     0.311    -0.974
 
 Model of rate heterogeneity: Uniform
 
@@ -2305,7 +2747,7 @@ An alignment has just been exported to alignment_89.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -2316,14 +2758,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.194
+  pi(C) = 0.339
+  pi(G) = 0.175
+  pi(T) = 0.292
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A      -1.1     0.464     0.239     0.399
+  C     0.266    -0.903     0.239     0.399
+  G     0.266     0.464     -1.13     0.399
+  T     0.266     0.464     0.239    -0.968
 
 Model of rate heterogeneity: Uniform
 
@@ -2331,7 +2778,7 @@ An alignment has just been exported to alignment_90.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -2342,14 +2789,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.245
+  pi(C) = 0.191
+  pi(G) = 0.316
+  pi(T) = 0.248
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A     -1.02     0.257     0.426     0.334
+  C     0.331     -1.09     0.426     0.334
+  G     0.331     0.257    -0.921     0.334
+  T     0.331     0.257     0.426     -1.01
 
 Model of rate heterogeneity: Uniform
 
@@ -2357,7 +2809,7 @@ An alignment has just been exported to alignment_91.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -2368,14 +2820,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.355
+  pi(C) = 0.262
+  pi(G) = 0.282
+  pi(T) = 0.102
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.901     0.365     0.393     0.143
+  C     0.495     -1.03     0.393     0.143
+  G     0.495     0.365        -1     0.143
+  T     0.495     0.365     0.393     -1.25
 
 Model of rate heterogeneity: Uniform
 
@@ -2383,7 +2840,7 @@ An alignment has just been exported to alignment_92.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -2394,14 +2851,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.0847
+  pi(C) = 0.146
+  pi(G) = 0.41
+  pi(T) = 0.36
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A     -1.36     0.216     0.608     0.534
+  C     0.126     -1.27     0.608     0.534
+  G     0.126     0.216    -0.876     0.534
+  T     0.126     0.216     0.608    -0.949
 
 Model of rate heterogeneity: Uniform
 
@@ -2409,7 +2871,7 @@ An alignment has just been exported to alignment_93.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -2420,14 +2882,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.33
+  pi(C) = 0.354
+  pi(G) = 0.139
+  pi(T) = 0.178
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.937     0.494     0.194     0.248
+  C     0.461    -0.904     0.194     0.248
+  G     0.461     0.494      -1.2     0.248
+  T     0.461     0.494     0.194     -1.15
 
 Model of rate heterogeneity: Uniform
 
@@ -2435,7 +2902,7 @@ An alignment has just been exported to alignment_94.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -2446,14 +2913,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.277
+  pi(C) = 0.148
+  pi(G) = 0.316
+  pi(T) = 0.259
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.984     0.202      0.43     0.352
+  C     0.377     -1.16      0.43     0.352
+  G     0.377     0.202    -0.931     0.352
+  T     0.377     0.202      0.43     -1.01
 
 Model of rate heterogeneity: Uniform
 
@@ -2461,7 +2933,7 @@ An alignment has just been exported to alignment_95.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -2472,14 +2944,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.249
+  pi(C) = 0.186
+  pi(G) = 0.305
+  pi(T) = 0.26
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A     -1.01      0.25      0.41      0.35
+  C     0.336      -1.1      0.41      0.35
+  G     0.336      0.25    -0.936      0.35
+  T     0.336      0.25      0.41    -0.996
 
 Model of rate heterogeneity: Uniform
 
@@ -2487,7 +2964,7 @@ An alignment has just been exported to alignment_96.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -2498,14 +2975,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.289
+  pi(C) = 0.239
+  pi(G) = 0.165
+  pi(T) = 0.307
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A    -0.963     0.324     0.224     0.416
+  C     0.392     -1.03     0.224     0.416
+  G     0.392     0.324     -1.13     0.416
+  T     0.392     0.324     0.224    -0.939
 
 Model of rate heterogeneity: Uniform
 
@@ -2513,7 +2995,7 @@ An alignment has just been exported to alignment_97.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -2524,14 +3006,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.26
+  pi(C) = 0.224
+  pi(G) = 0.155
+  pi(T) = 0.361
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A     -1.02     0.307     0.213     0.496
+  C     0.357     -1.07     0.213     0.496
+  G     0.357     0.307     -1.16     0.496
+  T     0.357     0.307     0.213    -0.878
 
 Model of rate heterogeneity: Uniform
 
@@ -2539,7 +3026,7 @@ An alignment has just been exported to alignment_98.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -2550,14 +3037,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.232
+  pi(C) = 0.227
+  pi(G) = 0.361
+  pi(T) = 0.18
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A     -1.05     0.311     0.493     0.246
+  C     0.316     -1.06     0.493     0.246
+  G     0.316     0.311    -0.873     0.246
+  T     0.316     0.311     0.493     -1.12
 
 Model of rate heterogeneity: Uniform
 
@@ -2565,7 +3057,7 @@ An alignment has just been exported to alignment_99.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -2576,14 +3068,19 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.239
+  pi(C) = 0.251
+  pi(G) = 0.159
+  pi(T) = 0.352
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A     -1.04     0.343     0.217     0.481
+  C     0.326     -1.02     0.217     0.481
+  G     0.326     0.343     -1.15     0.481
+  T     0.326     0.343     0.217    -0.886
 
 Model of rate heterogeneity: Uniform
 
@@ -2591,7 +3088,7 @@ An alignment has just been exported to alignment_100.phy
 SUBSTITUTION PROCESS
 --------------------
 
-Model of substitution: JC
+Model of substitution: GTR+F
 
 Rate parameter R:
 
@@ -2602,17 +3099,22 @@ Rate parameter R:
   C-T: 1
   G-T: 1
 
-State frequencies: (equal frequencies)
+State frequencies: (empirical counts from alignment)
+
+  pi(A) = 0.222
+  pi(C) = 0.201
+  pi(G) = 0.282
+  pi(T) = 0.295
 
 Rate matrix Q:
 
-  A        -1     0.333     0.333     0.333
-  C     0.333        -1     0.333     0.333
-  G     0.333     0.333        -1     0.333
-  T     0.333     0.333     0.333        -1
+  A     -1.05      0.27     0.379     0.396
+  C     0.299     -1.07     0.379     0.396
+  G     0.299      0.27    -0.965     0.396
+  T     0.299      0.27     0.379    -0.948
 
 Model of rate heterogeneity: Uniform
 
 [Alignment Simulator] Done
-Simulation time: 0.238s
-Date and Time: Tue May 16 23:08:57 2023
+Simulation time: 4.73s
+Date and Time: Mon Feb 17 10:56:01 2025
